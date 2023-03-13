@@ -17,6 +17,7 @@ const caseStudies = [
       "White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.",
   },
   {
+    id: "king-scraper",
     name: "King County Document Scraper",
     description:
       "Scraped documents from King County (including scraping text from the actual document PDF) and extracted key pieces of information",
@@ -25,6 +26,7 @@ const caseStudies = [
     url: `https://recordsearch.kingcounty.gov/LandmarkWeb/search/index?theme=.blue&section=searchCriteriaName&quickSearchSelection=`,
   },
   {
+    id: "ad-lib-scraper",
     name: "AdLibrary.io",
     description:
       "Scraped Ads from Facebook Ad Library and save them into a swipe file",
@@ -33,6 +35,7 @@ const caseStudies = [
     url: `https://adlibrary.io`,
   },
   {
+    id: "sam-says",
     name: "Sam Says",
     description:
       "Scraped all of Sam Parr's tweets and trained an AI model to respond like he would",
@@ -41,6 +44,7 @@ const caseStudies = [
     url: `https://sam-says.vercel.app/`,
   },
   {
+    id: "lemon-drops",
     name: "LemonDrops.io",
     description: "Notify's users when lululemon stock is back. (Sold in 2023)",
     imageSrc: "lemon_drops.png",
@@ -95,9 +99,8 @@ export default function Home() {
           // height="h-96"
           src="https://www.youtube.com/embed/4jw2XeZ282w"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen={true}
         ></iframe>
       </div>
 
@@ -127,7 +130,7 @@ export default function Home() {
         <div className="mt-16 space-y-16">
           {caseStudies.map((feature, featureIdx) => (
             <div
-              key={feature.name}
+              key={feature.id}
               className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
             >
               <div

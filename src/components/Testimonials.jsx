@@ -39,7 +39,7 @@ export default function Testimonials() {
           <div className="-mt-8 sm:-mx-4 text-left">
             {testimonials.map((testimonial) => (
               <div
-                key={testimonial.author.handle}
+                key={testimonial.author.name}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
                 <figure className="rounded-2xl bg-zinc-700 p-8 text-sm leading-6">

@@ -9,10 +9,10 @@ const includedFeatures = [
 
 export default function Pricing() {
   return (
-    <div className="py-24 sm:py-32 dark:text-zinc-400" id="pricing">
+    <div className="py-24 sm:py-32 text-zinc-400" id="pricing">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight dark:text-zinc-100">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-100">
             Pricing
           </h2>
         </div>

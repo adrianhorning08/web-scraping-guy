@@ -75,10 +75,10 @@ export default function Home() {
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 flex justify-center">
         {/* Hero */}
         <div className="max-w-2xl">
-          <h1 className="text-5xl font-bold tracking-tight dark:text-zinc-100 sm:text-7xl">
+          <h1 className="text-5xl font-bold tracking-tight text-zinc-100 sm:text-7xl">
             Replace your VA with scraping
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          <p className="mt-6 text-base text-zinc-400">
             I write code that will scrape data from any website, display it to
             you in a user friendly way, and can notify you when it changes. All
             while being faster and more accurate than a human.
@@ -115,7 +115,7 @@ export default function Home() {
         className="mx-auto max-w-2xl py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 bg-zinc-800 rounded-lg"
       >
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-100">
             Recent Work
           </h2>
           <p className="mt-4 text-zinc-400">
@@ -138,7 +138,7 @@ export default function Home() {
                   "mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4"
                 )}
               >
-                <h3 className="font-bold text-xl md:text-2xl dark:text-zinc-100">
+                <h3 className="font-bold text-xl md:text-2xl text-zinc-100">
                   {feature.name}
                 </h3>
                 <p className="mt-2 text-zinc-400">{feature.description}</p>
@@ -181,7 +181,7 @@ export default function Home() {
 
       {/* CTA */}
       <div id="contact" className="mt-16">
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-100">
           Book a Call
         </h2>
         <div className="mt-12 flex justify-center">

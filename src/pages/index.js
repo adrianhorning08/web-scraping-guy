@@ -3,6 +3,7 @@ import { InlineWidget } from "react-calendly";
 import Head from "next/head";
 import { classNames } from "@/utils";
 import Pricing from "@/components/Pricing";
+import Testimonials from "@/components/Testimonials";
 
 const caseStudies = [
   {
@@ -176,7 +177,10 @@ export default function Home() {
 
       <Pricing />
 
-      <div id="contact">
+      <Testimonials />
+
+      {/* CTA */}
+      <div id="contact" className="mt-16">
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
           Book a Call
         </h2>

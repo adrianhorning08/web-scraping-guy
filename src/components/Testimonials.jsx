@@ -26,7 +26,7 @@ export default function Testimonials() {
     <div className="py-8" id="testimonials">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="font-semibold leading-8 tracking-tight text-3xl sm:text-4xl text-zinc-100">
+          <h2 className="font-semibold leading-8 tracking-tight text-3xl sm:text-8xl text-zinc-100">
             Testimonials
           </h2>
           {/* <p className="mt-2 text-3xl font-bold tracking-tight text-zinc-400 sm:text-4xl">

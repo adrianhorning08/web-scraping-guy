@@ -264,16 +264,21 @@ export default function ApiDemos() {
   const [docType, setDocType] = useState(`4`);
   const [searchTerm, setSearchTerm] = useState(``);
   const [payload, setPayload] = useState({});
+  const [parcelId, setParcelId] = useState(``);
+  const [parcelPayload, setParcelPayload] = useState({});
+  const [isParcelLoading, setIsParcelLoading] = useState(false);
+  const [isKingDocsLoading, setIsKingDocsLoading] = useState(false);
 
   useEffect(() => {
     const highlight = async () => {
       await Prism.highlightAll(); // <--- prepare Prism
     };
     highlight(); // <--- call the async function
-  }, [Object.keys(payload).length]); // <--- run when post updates
+  }, [Object.keys(payload).length, Object.keys(parcelPayload).length]); // <--- run when post updates
 
   async function getKingCountyDocs(e) {
     e.preventDefault();
+    setIsKingDocsLoading(true);
     try {
       const res = await axios({
         method: "post",
@@ -283,16 +288,13 @@ export default function ApiDemos() {
           searchTerm,
         },
       });
-      console.log("res.data", res.data);
       setPayload(res.data);
     } catch (error) {
       console.log("error at getKingCountyDocs", error.message);
+    } finally {
+      setIsKingDocsLoading(false);
     }
   }
-
-  const testJson = {
-    docType: "4",
-  };
 
   function createSelectList() {
     const options = [];
@@ -306,16 +308,36 @@ export default function ApiDemos() {
     return options;
   }
 
+  async function getLAParcel(e) {
+    e.preventDefault();
+    setIsParcelLoading(true);
+    try {
+      const res = await axios({
+        method: "post",
+        url: "/api/laparcel",
+        data: {
+          parcelId,
+        },
+      });
+      console.log("res.data", res.data);
+      setParcelPayload(res.data);
+    } catch (error) {
+      console.log("error at getLAParcel", error.message);
+    } finally {
+      setIsParcelLoading(false);
+    }
+  }
+
   return (
     <div className="mx-auto max-w-2xl py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
-      <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-100">
+      <h2 className="text-3xl sm:text-8xl font-bold tracking-tight text-zinc-100 mb-8">
         Give it a Try!
       </h2>
       <div className="text-left">
         <h3 className="font-bold text-xl md:text-2xl text-zinc-100">
           Get King County Documents
         </h3>
-        <div className="md:flex">
+        <div className="md:flex md:justify-between">
           <form onSubmit={getKingCountyDocs} className="md:mr-8">
             <label
               htmlFor="docType"
@@ -342,7 +364,30 @@ export default function ApiDemos() {
               className="mt-4 rounded-md bg-indigo-600 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               type="submit"
             >
-              Submit
+              {isKingDocsLoading ? (
+                <svg
+                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8H4z"
+                  ></path>
+                </svg>
+              ) : (
+                `Submit`
+              )}
             </button>
           </form>
           {Object.keys(payload).length > 0 && (
@@ -353,6 +398,69 @@ export default function ApiDemos() {
                 lang="json"
               >
                 {JSON.stringify(payload, null, 2)}
+              </code>
+            </pre>
+          )}
+        </div>
+      </div>
+      <div className="text-left mt-8">
+        <h3 className="font-bold text-xl md:text-2xl text-zinc-100">
+          Get LA County Parcel Data
+        </h3>
+        <div className="md:flex md:justify-between">
+          <form onSubmit={getLAParcel} className="md:mr-8">
+            <label
+              htmlFor="parcelNumber"
+              className="block text-sm font-medium leading-6"
+            >
+              Parcel Number
+            </label>
+            <input
+              id="parcelNumber"
+              type="text"
+              className="mt-4 block w-full rounded-md border-0 px-2 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-400 sm:text-sm sm:leading-6"
+              placeholder="2004014001"
+              value={parcelId}
+              onChange={(e) => setParcelId(e.target.value)}
+            />
+            <button
+              className="mt-4 rounded-md bg-indigo-600 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              type="submit"
+            >
+              {isParcelLoading ? (
+                <svg
+                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8H4z"
+                  ></path>
+                </svg>
+              ) : (
+                `Submit`
+              )}
+            </button>
+          </form>
+          {Object.keys(parcelPayload).length > 0 && (
+            <pre className="h-96 rounded md:max-w-2xl">
+              <code
+                className="language-json"
+                style={{ whiteSpace: "pre-wrap" }}
+                lang="json"
+              >
+                {JSON.stringify(parcelPayload, null, 2)}
               </code>
             </pre>
           )}

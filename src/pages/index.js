@@ -10,8 +10,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Custom Web Scraping Services for County Websites</title>
-        <meta name="description" content="Replace your VA with web scraping" />
+        <title>Custom Web Scraping for County Websites</title>
+        <meta
+          name="description"
+          content="Get a custom web scraper (bot) for a county website"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -28,7 +31,7 @@ export default function Home() {
         {/* Hero */}
         <div className="max-w-2xl">
           <h1 className="text-5xl font-bold tracking-tight text-zinc-100 sm:text-7xl">
-            Custom Web Scraping Services for County Websites
+            Custom Web Scraping for County Websites
           </h1>
           <p className="mt-6 text-base text-zinc-400">
             Are you tired of manually collecting data from county websites? Let
@@ -75,7 +78,7 @@ export default function Home() {
 
       {/* CTA */}
       <div id="contact" className="mt-16">
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-100">
+        <h2 className="text-3xl sm:text-8xl font-bold tracking-tight text-zinc-100">
           Book a Call
         </h2>
         <div className="mt-12 flex justify-center">

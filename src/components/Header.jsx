@@ -117,9 +117,10 @@ function MobileNavigation(props) {
             <nav className="mt-6">
               <ul className="-my-2 divide-y text-base divide-zinc-100/5 text-zinc-300">
                 <MobileNavItem href="#recent-work">Recent Work</MobileNavItem>
-                <MobileNavItem href="#pricing">Pricing</MobileNavItem>
                 <MobileNavItem href="#testimonials">Testimonials</MobileNavItem>
+                <MobileNavItem href="#pricing">Pricing</MobileNavItem>
                 <MobileNavItem href="#contact">Contact</MobileNavItem>
+                {/* <MobileNavItem href="/blog">Blog</MobileNavItem> */}
               </ul>
             </nav>
           </Popover.Panel>
@@ -155,9 +156,10 @@ function DesktopNavigation(props) {
     <nav {...props}>
       <ul className="flex rounded-full px-3 text-sm font-medium shadow-lg shadow-zinc-800/5 ring-1 backdrop-blur bg-zinc-800/90 text-zinc-200 ring-white/10">
         <NavItem href="#recent-work">Recent Work</NavItem>
-        <NavItem href="#pricing">Pricing</NavItem>
         <NavItem href="#testimonials">Testimonials</NavItem>
+        <NavItem href="#pricing">Pricing</NavItem>
         <NavItem href="#contact">Contact</NavItem>
+        {/* <NavItem href="/blog">Blog</NavItem> */}
       </ul>
     </nav>
   );

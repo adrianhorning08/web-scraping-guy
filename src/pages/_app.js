@@ -1,23 +1,42 @@
 import "@/styles/globals.css";
 import styles from "@/styles/Home.module.css";
+import "prismjs/themes/prism-tomorrow.css";
+
 import {
   GitHubIcon,
   LinkedInIcon,
   TwitterIcon,
+  YoutubeIcon,
 } from "@/components/SocialIcons";
 import { Outfit } from "@next/font/google";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const outfit = Outfit({ subsets: ["latin"] });
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 transition fill-zinc-400 group-hover:fill-zinc-300" />
+      <Icon className="h-6 w-6 transition fill-zinc-400 group-hover:fill-indigo-400" />
     </Link>
   );
 }
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    // @ts-ignore
+    window.$crisp = [];
+    // @ts-ignore
+    window.CRISP_WEBSITE_ID = "724845e9-0454-4d58-a83d-635001ff19ca";
+    (function () {
+      const d = document;
+      const s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      // @ts-ignore
+      s.async = 1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  }, []);
+
   return (
     <>
       <main className={`${outfit.className}`}>
@@ -35,6 +54,12 @@ export default function App({ Component, pageProps }) {
               target="_blank"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
+            />
+            <SocialLink
+              href="https://www.youtube.com/channel/UCdFJWUa43smRm4IpHBpPg_A"
+              target="_blank"
+              aria-label="Check out my YouTube channel"
+              icon={YoutubeIcon}
             />
             <SocialLink
               href="https://github.com/adrianhorning08"

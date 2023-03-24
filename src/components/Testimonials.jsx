@@ -60,6 +60,56 @@ export default function Testimonials() {
                 </figure>
               </div>
             ))}
+            <div
+              key={"sully"}
+              className="pt-8 sm:inline-block sm:w-full sm:px-4"
+            >
+              <blockquote className="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  .
+                  <a href="https://twitter.com/adrian_horning_?ref_src=twsrc%5Etfw">
+                    @adrian_horning_
+                  </a>{" "}
+                  helped me on recent project and is absolutely wicked at web
+                  scraping data and honestly a just good dood.<br></br>Big fan!
+                </p>
+                &mdash; Sully 🤝 (@sullydoesitall){" "}
+                <a href="https://twitter.com/sullydoesitall/status/1638006313320869888?ref_src=twsrc%5Etfw">
+                  March 21, 2023
+                </a>
+              </blockquote>{" "}
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+              ></script>
+            </div>
+          </div>
+          <div key={"yifan"} className="pt-8 sm:inline-block sm:w-full sm:px-4">
+            <blockquote className="twitter-tweet" data-theme="dark">
+              <p lang="en" dir="ltr">
+                Thanks to{" "}
+                <a href="https://twitter.com/adrian_horning_?ref_src=twsrc%5Etfw">
+                  @adrian_horning_
+                </a>{" "}
+                , my startup is alive again. 🚀<br></br>Keeping fingers crossed
+                that the embedded headers in GET request won’t expire. 🤞🏼
+                <a href="https://twitter.com/hashtag/buildinpublic?src=hash&amp;ref_src=twsrc%5Etfw">
+                  #buildinpublic
+                </a>{" "}
+                <a href="https://twitter.com/hashtag/indiehackers?src=hash&amp;ref_src=twsrc%5Etfw">
+                  #indiehackers
+                </a>{" "}
+                <a href="https://t.co/YAUBnRfa8O">pic.twitter.com/YAUBnRfa8O</a>
+              </p>
+              &mdash; Yifan Goh (@imgyf){" "}
+              <a href="https://twitter.com/imgyf/status/1589168514564493312?ref_src=twsrc%5Etfw">
+                November 6, 2022
+              </a>
+            </blockquote>{" "}
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+            ></script>
           </div>
         </div>
       </div>

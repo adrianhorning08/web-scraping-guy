@@ -280,15 +280,31 @@ export default function ApiDemos() {
     e.preventDefault();
     setIsKingDocsLoading(true);
     try {
-      const res = await axios({
+      const startDate = new Date();
+      const startMonth = startDate.getMonth() + 1;
+      const startDay = startDate.getDate();
+      const startYear = startDate.getFullYear();
+      const startString = `${startMonth}/${startDay}/${startYear}`;
+
+      // end date is 30 days prior from today in MM/DD/YYYY format
+      const endDate = new Date();
+      endDate.setDate(endDate.getDate() - 30);
+      const endMonth = endDate.getMonth() + 1;
+      const endDay = endDate.getDate();
+      const endYear = endDate.getFullYear();
+      const endString = `${endMonth}/${endDay}/${endYear}`;
+
+      const response = await axios({
         method: "post",
-        url: "/api/kingcountydocs",
+        url: "https://54qfvbdfb0.execute-api.us-west-2.amazonaws.com/default/king-county-search-api",
         data: {
-          docType,
-          searchTerm,
+          documentType: docType,
+          startDate: endString,
+          endDate: startString,
+          searchTerm: searchTerm,
         },
       });
-      setPayload(res.data);
+      setPayload(response.data);
     } catch (error) {
       console.log("error at getKingCountyDocs", error.message);
     } finally {

@@ -296,7 +296,7 @@ export default function ApiDemos() {
 
       const response = await axios({
         method: "post",
-        url: "https://54qfvbdfb0.execute-api.us-west-2.amazonaws.com/default/king-county-search-api",
+        url: "https://32k6g576k7.execute-api.us-west-2.amazonaws.com/default/king-county-search-api",
         data: {
           documentType: docType,
           startDate: endString,
@@ -349,7 +349,7 @@ export default function ApiDemos() {
       <h2 className="text-3xl sm:text-8xl font-bold tracking-tight text-zinc-100 mb-8">
         Give it a Try!
       </h2>
-      <div className="text-left">
+      {/* <div className="text-left">
         <h3 className="font-bold text-xl md:text-2xl text-zinc-100">
           Get King County Documents
         </h3>
@@ -418,7 +418,7 @@ export default function ApiDemos() {
             </pre>
           )}
         </div>
-      </div>
+      </div> */}
       <div className="text-left mt-8">
         <h3 className="font-bold text-xl md:text-2xl text-zinc-100">
           Get LA County Parcel Data

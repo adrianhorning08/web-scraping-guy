@@ -23,9 +23,10 @@ const arr = [
   },
   {
     id: "nyc-federal-liens",
-    name: "NYC Federal Liens",
+    name: "ACRIS Scrape",
     type: "google-doc",
-    description: "Scraped all the federal liens in NYC during February 2023",
+    description:
+      "Scraped all the federal liens from ACRIS in NYC during February 2023",
     // imageSrc: "hennepin.png",
     // imageAlt: "Hennepin County",
     // url: `https://docs.google.com/spreadsheets/d/1pu7Ru4Xqxw9uCuXvg33mO7aljqghXkK21ktpBEOZfzM/edit?usp=sharing`,

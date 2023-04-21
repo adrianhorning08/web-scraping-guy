@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Custom Data Provider for County Websites</title>
+        <title>Property Data Provider for County Websites</title>
         <meta
           name="description"
-          content="Get data from county websites automatically"
+          content="Get property data from county websites automatically"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -31,7 +31,7 @@ export default function Home() {
         {/* Hero */}
         <div className="max-w-2xl">
           <h1 className="text-5xl font-bold tracking-tight text-zinc-100 sm:text-8xl">
-            Get County Website Data
+            Get County Property Data
           </h1>
           <p className="mt-6 text-base text-zinc-400">
             Are you tired of manually collecting data from county websites? We

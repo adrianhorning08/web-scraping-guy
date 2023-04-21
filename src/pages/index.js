@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Custom Web Scraping for County Websites</title>
+        <title>Custom Data Provider for County Websites</title>
         <meta
           name="description"
-          content="Get a custom web scraper (bot) for a county website"
+          content="Get data from county websites automatically"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -30,14 +30,13 @@ export default function Home() {
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 flex justify-center">
         {/* Hero */}
         <div className="max-w-2xl">
-          <h1 className="text-5xl font-bold tracking-tight text-zinc-100 sm:text-7xl">
-            Custom Web Scraping for County Websites
+          <h1 className="text-5xl font-bold tracking-tight text-zinc-100 sm:text-8xl">
+            Get County Website Data
           </h1>
           <p className="mt-6 text-base text-zinc-400">
-            Are you tired of manually collecting data from county websites? Let
-            us help you streamline your data gathering process with our custom
-            web scraping services. Our expert team can create custom web
-            scraping solutions tailored to your specific needs and requirements
+            Are you tired of manually collecting data from county websites? We
+            provide custom solutions that get that county data for you
+            automatically. And even perform skip tracing on that data as well.
             {/* I write code that will scrape data from any website, display it to
             you in a user friendly way, and can notify you when it changes. All
             while being faster and more accurate than a human. */}

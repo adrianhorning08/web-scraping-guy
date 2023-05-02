@@ -31,7 +31,7 @@ export default function Home() {
         {/* Hero */}
         <div className="max-w-2xl">
           <h1 className="text-5xl font-bold tracking-tight text-zinc-100 sm:text-8xl">
-            Get County Property Data
+            Your Property Data Provider
           </h1>
           <p className="mt-6 text-base text-zinc-400">
             Are you tired of manually collecting data from county websites? We
@@ -73,7 +73,7 @@ export default function Home() {
 
       <Testimonials />
 
-      <Pricing />
+      {/* <Pricing /> */}
 
       {/* CTA */}
       <div id="contact" className="mt-16">

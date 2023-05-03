@@ -36,7 +36,7 @@ export default function Testimonials() {
         {/* <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none"> */}
         <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20">
           {/* <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3 text-left"> */}
-          <div className="-mt-8 sm:-mx-4 text-left">
+          <div className="">
             <div
               key={"moses"}
               className="pt-8 sm:inline-block sm:w-full sm:px-4"
@@ -114,27 +114,31 @@ export default function Testimonials() {
             ></script>
           </div>
         </div>
-        {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.author.name}
-            className="pt-8 sm:inline-block sm:w-full sm:px-4"
-          >
-            <figure className="rounded-2xl bg-zinc-700 p-8 text-sm leading-6">
-              <blockquote className="text-zinc-100">
-                <p>{`“${testimonial.body}”`}</p>
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-x-4">
-                <UserCircleIcon className="h-10 w-10 rounded-full" />
-                <div>
-                  <div className="font-semibold">{testimonial.author.name}</div>
-                  {testimonial.author.handle && (
-                    <div className="">{`@${testimonial.author.handle}`}</div>
-                  )}
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-        ))}
+        <div className="-mt-8 sm:-mx-4 text-left">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.author.name}
+              className="pt-8 sm:inline-block sm:w-full sm:px-4"
+            >
+              <figure className="rounded-2xl bg-zinc-700 p-8 text-sm leading-6">
+                <blockquote className="text-zinc-100">
+                  <p>{`“${testimonial.body}”`}</p>
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-x-4">
+                  <UserCircleIcon className="h-10 w-10 rounded-full" />
+                  <div>
+                    <div className="font-semibold">
+                      {testimonial.author.name}
+                    </div>
+                    {testimonial.author.handle && (
+                      <div className="">{`@${testimonial.author.handle}`}</div>
+                    )}
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -60,7 +60,7 @@ export default function Home() {
 
       <a
         className="my-16 inline-flex items-center text-base px-24 py-3 md:text-3xl md:px-64 md:py-8 border border-transparent font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        href="https://calendly.com/adrian-horning/meeting"
+        href="https://calendly.com/county-property-data/30min"
         target={"_blank"}
         rel={"noopener noreferrer"}
       >
@@ -81,7 +81,7 @@ export default function Home() {
           Book a Call
         </h2>
         <div className="mt-12 flex justify-center">
-          <InlineWidget url="https://calendly.com/adrian-horning/meeting" />
+          <InlineWidget url="https://calendly.com/county-property-data/30min" />
         </div>
       </div>
     </>

@@ -51,7 +51,7 @@ export default function Home() {
           // width="560"
           // height="315"
           // height="h-96"
-          src="https://www.youtube.com/embed/aqWkHrlGKNk"
+          src="https://www.youtube.com/embed/IhUo1p0CvAw"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen={true}

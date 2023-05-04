@@ -75,6 +75,11 @@ export default function App({ Component, pageProps }) {
             />
           </div>
         </nav>
+        <div>
+          <p className="text-center text-sm text-zinc-400">
+            adrian@countypropertydata.com
+          </p>
+        </div>
       </footer>
     </>
   );

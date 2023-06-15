@@ -73,7 +73,7 @@ export default function Home() {
 
       <Testimonials />
 
-      {/* <Pricing /> */}
+      <Pricing />
 
       {/* CTA */}
       <div id="contact" className="mt-16">

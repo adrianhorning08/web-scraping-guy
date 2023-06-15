@@ -52,10 +52,10 @@ export default function Pricing() {
                 <p className="text-base font-semibold">Minimum Price</p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
                   <span className="text-5xl font-bold tracking-tight">
-                    $1,000
+                    $500
                   </span>
                   <span className="text-sm font-semibold leading-6 tracking-wide">
-                    USD
+                    /website
                   </span>
                 </p>
                 <a
@@ -65,7 +65,7 @@ export default function Pricing() {
                   Book Call
                 </a>
                 <p className="mt-6 text-xs leading-5">
-                  Invoices and receipts available for easy company reimbursement
+                  *$50/month to run daily, weekly, or monthly
                 </p>
               </div>
             </div>

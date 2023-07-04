@@ -33,6 +33,9 @@ export default function MarketplaceAlerts() {
     e.preventDefault();
     try {
       setIsLoading(true);
+
+      localStorage.setItem("email", email);
+
       const res = await axios({
         method: "post",
         url: `/api/marketplaceSearch`,

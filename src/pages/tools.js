@@ -9,6 +9,7 @@ import axios from "axios";
 import Head from "next/head";
 import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Tools() {
   return (
@@ -25,12 +26,12 @@ export default function Tools() {
       <Header />
 
       <div className="py-24">
-        <a
+        <Link
           className="text-indigo-400 hover:text-indigo-500"
           href="/marketplace-alerts"
         >
           Facebook Marketplace Alerts
-        </a>
+        </Link>
       </div>
     </>
   );

@@ -77,6 +77,10 @@ function MobileNavItem({ href, children }) {
 }
 
 function MobileNavigation(props) {
+  const router = useRouter();
+  const path = router.pathname;
+
+  const isHomePage = path === "/";
   return (
     <Popover {...props}>
       <Popover.Button className="group flex items-center rounded-full px-4 py-2 text-sm font-medium shadow-lg shadow-zinc-800/5 ring-1 backdrop-blur bg-zinc-800/90 text-zinc-200 ring-white/10 hover:ring-white/20">
@@ -112,14 +116,23 @@ function MobileNavigation(props) {
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
                 <CloseIcon className="h-6 w-6 text-zinc-400" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-zinc-400">Navigation</h2>
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y text-base divide-zinc-100/5 text-zinc-300">
-                <MobileNavItem href="#recent-work">Recent Work</MobileNavItem>
-                <MobileNavItem href="#testimonials">Testimonials</MobileNavItem>
-                <MobileNavItem href="#pricing">Pricing</MobileNavItem>
-                <MobileNavItem href="#contact">Contact</MobileNavItem>
+                <MobileNavItem href={isHomePage ? "#recent-work" : "/"}>
+                  Recent Work
+                </MobileNavItem>
+                <MobileNavItem href={isHomePage ? "#testimonials" : "/"}>
+                  Testimonials
+                </MobileNavItem>
+                <MobileNavItem href={isHomePage ? "#pricing" : "/"}>
+                  Pricing
+                </MobileNavItem>
+                <MobileNavItem href={isHomePage ? "#contact" : "/"}>
+                  Contact
+                </MobileNavItem>
+                <MobileNavItem href="/tools">Free Tools</MobileNavItem>
+                {/* TODO: Make tools a dropdown */}
                 {/* <MobileNavItem href="/blog">Blog</MobileNavItem> */}
               </ul>
             </nav>
@@ -152,13 +165,23 @@ function NavItem({ href, children }) {
 }
 
 function DesktopNavigation(props) {
+  const router = useRouter();
+  const path = router.pathname;
+
+  const isHomePage = path === "/";
+
   return (
     <nav {...props}>
       <ul className="flex rounded-full px-3 text-sm font-medium shadow-lg shadow-zinc-800/5 ring-1 backdrop-blur bg-zinc-800/90 text-zinc-200 ring-white/10">
-        <NavItem href="#recent-work">Recent Work</NavItem>
-        <NavItem href="#testimonials">Testimonials</NavItem>
-        <NavItem href="#pricing">Pricing</NavItem>
-        <NavItem href="#contact">Contact</NavItem>
+        <NavItem href={isHomePage ? "#recent-work" : "/"}>Recent Work</NavItem>
+        <NavItem href={isHomePage ? "#testimonials" : "/"}>
+          Testimonials
+        </NavItem>
+        <NavItem href={isHomePage ? "#pricing" : "/"}>Pricing</NavItem>
+        <NavItem href={isHomePage ? "#contact" : "/"}>Contact</NavItem>
+        <NavItem href="/tools">Free Tools</NavItem>
+        {/* TODO: Make tools a dropdown */}
+
         {/* <NavItem href="/blog">Blog</NavItem> */}
       </ul>
     </nav>

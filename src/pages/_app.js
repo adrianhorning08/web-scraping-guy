@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import styles from "@/styles/Home.module.css";
 import "prismjs/themes/prism-tomorrow.css";
+import { Toaster } from "react-hot-toast";
 
 import {
   GitHubIcon,
@@ -81,6 +82,7 @@ export default function App({ Component, pageProps }) {
           </p>
         </div>
       </footer>
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }

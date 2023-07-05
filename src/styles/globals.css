@@ -100,17 +100,17 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
-html {
+/* html {
   color-scheme: dark;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
